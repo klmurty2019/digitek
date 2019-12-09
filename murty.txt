@@ -1,0 +1,26 @@
+public interface Service{
+	public Long calculate();
+}
+public class CalculateService implements Service{
+	public Long calculate(){
+		//old implementation
+	}
+}
+
+Service service = new CalculateService();
+Service service = new CalculateOverrideService();
+Long result = service.calculate();
+
+public class CalculateOverrideService extends CalculateService implements Service{
+	public Long calculate(){
+		//new implementation
+	}
+}
+
+Service service = new CalculateOverrideService();
+Long result = service.calculate();
+
+
+write a program to add 5 different numbers
+write a program to add unlimited numebrs
+	cond : when i enter 0, it should quit
